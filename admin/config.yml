@@ -4,6 +4,7 @@ backend:
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
+  site_domain: warm-otter-5f2bd0.netlify.app
 
 media_folder: "assets/img/uploads"
 public_folder: "/nithin-portfolio/assets/img/uploads"
