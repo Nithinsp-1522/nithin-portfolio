@@ -2,18 +2,8 @@
   "images": [
     {
       "title": "Design 01",
-      "image": "/nithin-portfolio/assets/img/uploads/1000735479.png",
+      "image": "/nithin-portfolio/assets/img/uploads/iron-man-marvel-superheroes-amoled-pitch-black-minimal-art-7680x6200-6293.png",
       "description": "Graphic design work"
-    },
-    {
-      "title": "Design 02",
-      "image": "assets/img/gallery/design-02.jpg",
-      "description": "Creative design work"
-    },
-    {
-      "title": "Design 03",
-      "image": "assets/img/gallery/design-03.jpg",
-      "description": "Visual experiment"
     }
   ]
 }
