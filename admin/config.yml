@@ -4,10 +4,6 @@ backend:
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
-  # GitHub OAuth needs a server-side OAuth proxy. Deploy the included
-  # oauth-worker/ to Cloudflare Workers (or another OAuth proxy) and set:
-  # base_url: https://YOUR-OAUTH-WORKER-DOMAIN
-  # auth_endpoint: auth
 
 media_folder: "assets/img/uploads"
 public_folder: "/nithin-portfolio/assets/img/uploads"
