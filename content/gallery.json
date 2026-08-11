@@ -1,0 +1,7 @@
+{
+  "images": [
+    {"title":"Design 01","image":"assets/img/gallery/design-01.jpg","description":"Graphic design work"},
+    {"title":"Design 02","image":"assets/img/gallery/design-02.jpg","description":"Creative design work"},
+    {"title":"Design 03","image":"assets/img/gallery/design-03.jpg","description":"Visual experiment"}
+  ]
+}

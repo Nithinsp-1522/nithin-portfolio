@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "name": "Nithin S P",
+    "role": "Full Stack Developer • Graphic Designer",
+    "eyebrow": "Available for opportunities",
+    "intro": "I build modern, responsive web experiences and turn ideas into practical digital solutions—with a creative eye for design.",
+    "location": "Kulasekharam",
+    "email": "spbrothers4@gmail.com",
+    "profileImage": "",
+    "resumeUrl": ""
+  },
+  "about": {
+    "title": "Developer mindset. Designer eye.",
+    "paragraphs": [
+      "Hello! I’m Nithin S P, a Full Stack Developer and Graphic Designer passionate about technology, web development, and creating things that solve real problems.",
+      "I enjoy learning by building projects and exploring new technologies. I combine technical knowledge with an eye for visual design to create experiences that are useful, responsive, and engaging.",
+      "I’m looking for an opportunity where I can learn from experienced teams, contribute to real-world projects, and grow as a developer while creating meaningful work."
+    ]
+  },
+  "whatIDo": [
+    {"title":"Web Development","icon":"fa-code","description":"Building responsive, modern websites using clean and maintainable code."},
+    {"title":"Graphic Design","icon":"fa-pen-nib","description":"Creating visual designs, layouts and creative assets with a strong eye for detail."},
+    {"title":"Problem Solving","icon":"fa-lightbulb","description":"Breaking complex problems into practical solutions and continuously improving my approach."},
+    {"title":"Continuous Learning","icon":"fa-graduation-cap","description":"Exploring new technologies, frameworks and development practices to keep improving my skills."}
+  ],
+  "skills": [
+    {"title":"Development","icon":"fa-code","items":["HTML5","CSS3","JavaScript","Bootstrap","Python","Django","Responsive Web Design"]},
+    {"title":"Graphic Design","icon":"fa-pen-nib","items":["Adobe Photoshop","Adobe Illustrator","CorelDRAW","UI-focused visual design"]},
+    {"title":"Web Tools","icon":"fa-wand-magic-sparkles","items":["AOS","Font Awesome","GLightbox","Decap CMS"]},
+    {"title":"Workflow","icon":"fa-github","items":["Git","GitHub","GitHub Pages","Team Collaboration","Communication"]}
+  ],
+  "education": [
+    {"year":"2015 — 2018","degree":"B.Com CA","institution":"Nesamoney","description":"Academic background in commerce with computer applications, alongside continued development of practical technology and design skills."}
+  ],
+  "whyMe": [
+    {"title":"Passionate about technology","description":"I genuinely enjoy learning and building."},
+    {"title":"Fast learner","description":"I’m comfortable exploring unfamiliar technologies."},
+    {"title":"Creative problem solver","description":"I look for practical and effective solutions."},
+    {"title":"Detail oriented","description":"I care about functionality and user experience."},
+    {"title":"Adaptable","description":"I can work independently and collaborate with a team."}
+  ],
+  "contact": {
+    "headline":"Let’s build something worth showing.",
+    "description":"I’m open to job opportunities, internships, freelance projects and collaborations.",
+    "email":"spbrothers4@gmail.com",
+    "phone":"",
+    "location":"Kulasekharam",
+    "github":"",
+    "linkedin":"",
+    "instagram":""
+  },
+  "footer": {
+    "copyright":"© 2026 Nithin S P. All Rights Reserved.",
+    "credit":"Designed & Developed by Nithin S P."
+  }
+}

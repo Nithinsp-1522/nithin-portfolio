@@ -1,0 +1,135 @@
+backend:
+  name: github
+  repo: Nithinsp-1522/nithin-portfolio
+  branch: main
+  # GitHub OAuth needs a server-side OAuth proxy. Deploy the included
+  # oauth-worker/ to Cloudflare Workers (or another OAuth proxy) and set:
+  # base_url: https://YOUR-OAUTH-WORKER-DOMAIN
+  # auth_endpoint: auth
+
+media_folder: "assets/img/uploads"
+public_folder: "/nithin-portfolio/assets/img/uploads"
+publish_mode: simple
+site_url: https://nithinsp-1522.github.io/nithin-portfolio/
+display_url: https://nithinsp-1522.github.io/nithin-portfolio/
+
+collections:
+  - name: site
+    label: Site Content
+    files:
+      - name: general
+        label: All Website Details
+        file: content/site.json
+        format: json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Role, name: role, widget: string}
+              - {label: Eyebrow, name: eyebrow, widget: string}
+              - {label: Introduction, name: intro, widget: text}
+              - {label: Location, name: location, widget: string}
+              - {label: Email, name: email, widget: string}
+              - {label: Profile Image, name: profileImage, widget: image, required: false}
+              - {label: Resume URL, name: resumeUrl, widget: string, required: false}
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - {label: Section Title, name: title, widget: string}
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                field: {label: Paragraph, name: paragraph, widget: text}
+          - label: What I Do
+            name: whatIDo
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Font Awesome Icon, name: icon, widget: string}
+              - {label: Description, name: description, widget: text}
+          - label: Skills
+            name: skills
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Font Awesome Icon, name: icon, widget: string}
+              - label: Items
+                name: items
+                widget: list
+                field: {label: Skill, name: skill, widget: string}
+          - label: Education
+            name: education
+            widget: list
+            fields:
+              - {label: Year, name: year, widget: string}
+              - {label: Degree / Course, name: degree, widget: string}
+              - {label: Institution, name: institution, widget: string}
+              - {label: Description, name: description, widget: text}
+          - label: Why Me
+            name: whyMe
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - {label: Headline, name: headline, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Email, name: email, widget: string}
+              - {label: Phone, name: phone, widget: string, required: false}
+              - {label: Location, name: location, widget: string}
+              - {label: GitHub URL, name: github, widget: string, required: false}
+              - {label: LinkedIn URL, name: linkedin, widget: string, required: false}
+              - {label: Instagram URL, name: instagram, widget: string, required: false}
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - {label: Copyright, name: copyright, widget: string}
+              - {label: Credit, name: credit, widget: string}
+
+  - name: projects
+    label: Projects
+    files:
+      - name: all
+        label: All Projects
+        file: content/projects.json
+        format: json
+        fields:
+          - label: Projects
+            name: projects
+            widget: list
+            fields:
+              - {label: Project Name, name: title, widget: string}
+              - {label: Category, name: category, widget: string}
+              - {label: Description, name: description, widget: text}
+              - label: Technologies
+                name: technologies
+                widget: list
+                field: {label: Technology, name: technology, widget: string}
+              - {label: Project Image, name: image, widget: image, required: false}
+              - {label: Live Demo URL, name: liveUrl, widget: string, required: false}
+              - {label: GitHub URL, name: githubUrl, widget: string, required: false}
+              - {label: Featured, name: featured, widget: boolean, default: true}
+              - {label: Display Order, name: order, widget: number, default: 1}
+
+  - name: gallery
+    label: Design Gallery
+    files:
+      - name: gallery
+        label: Gallery Images
+        file: content/gallery.json
+        format: json
+        fields:
+          - label: Images
+            name: images
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Description, name: description, widget: string, required: false}

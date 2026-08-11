@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "title": "Mobile Online Shopping",
+      "category": "Web Development",
+      "description": "A responsive online-shopping project focused on a practical storefront experience and modern web presentation.",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "Python",
+        "Django"
+      ],
+      "image": "",
+      "liveUrl": "",
+      "githubUrl": "",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "title": "Event Company Website",
+      "category": "Web + Design",
+      "description": "A project focused on presenting an event company through an interactive, user-friendly digital experience.",
+      "technologies": [
+        "Web Design",
+        "Frontend",
+        "UI"
+      ],
+      "image": "",
+      "liveUrl": "",
+      "githubUrl": "",
+      "featured": true,
+      "order": 2
+    },
+    {
+      "title": "Creative Design Collection",
+      "category": "Graphic Design",
+      "description": "Selected graphic-design work, branding explorations, posters and visual experiments.",
+      "technologies": [
+        "Photoshop",
+        "Illustrator",
+        "CorelDRAW"
+      ],
+      "image": "",
+      "liveUrl": "",
+      "githubUrl": "",
+      "featured": true,
+      "order": 3
+    }
+  ]
+}
