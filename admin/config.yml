@@ -2,6 +2,8 @@ backend:
   name: github
   repo: Nithinsp-1522/nithin-portfolio
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
   # GitHub OAuth needs a server-side OAuth proxy. Deploy the included
   # oauth-worker/ to Cloudflare Workers (or another OAuth proxy) and set:
   # base_url: https://YOUR-OAUTH-WORKER-DOMAIN
