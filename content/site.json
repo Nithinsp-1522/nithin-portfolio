@@ -18,7 +18,14 @@
   },
   "whatIDo": [],
   "skills": [],
-  "education": [],
+  "education": [
+    {
+      "year": "2020 - 2021",
+      "degree": "PYTHON FULL STACK DEVELOPER ",
+      "institution": "Trinity Technology, Trivandrum ",
+      "description": "Python full Stack developer, Stonge Knowledge in Python, Django, HTML, Css and Js"
+    }
+  ],
   "whyMe": [],
   "contact": {
     "headline": "Let’s build something worth showing.",
