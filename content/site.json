@@ -107,13 +107,38 @@
       "institution": "Govt. High School, Thirunanthikarai"
     }
   ],
-  "whyMe": [],
+  "whyMe": [
+    {
+      "title": "Creative & Technical",
+      "description": "I combine creative design skills with technical development knowledge to handle both the visual and functional sides of a project."
+    },
+    {
+      "title": "Creative Problem Solving",
+      "description": "I focus on finding simple, effective, and creative solutions that turn ideas into practical results."
+    },
+    {
+      "title": "Design + Development",
+      "description": "With experience in Photoshop, Illustrator, CorelDRAW, HTML, CSS, JavaScript, Python, and Django, I can work across both design and web development."
+    },
+    {
+      "title": "User-Focused Approach",
+      "description": "I create designs and websites that are visually appealing, responsive, easy to use, and focused on the user's experience."
+    },
+    {
+      "title": "Attention to Detail",
+      "description": "I pay close attention to typography, spacing, colors, layouts, functionality, and overall quality."
+    },
+    {
+      "title": "Continuous Learning",
+      "description": "I continuously explore new design techniques and technologies to improve my skills and deliver better work."
+    }
+  ],
   "contact": {
-    "headline": "Let’s build something worth showing.",
-    "description": "I’m open to job opportunities, internships, freelance projects and collaborations.",
+    "headline": "Get In Touch",
+    "description": "Have a project in mind or looking for a creative designer and developer? Feel free to get in touch. I’m always open to discussing new projects, creative ideas, and opportunities.",
     "email": "spbrothers4@gmail.com",
     "phone": "+91 80724 05274",
-    "location": "Kulasekharam",
+    "location": "Kulasekharam, Kanyakumari",
     "github": "",
     "linkedin": "",
     "instagram": ""
