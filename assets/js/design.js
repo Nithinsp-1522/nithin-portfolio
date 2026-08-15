@@ -5,9 +5,13 @@
   const imageUrl=value=>{
     if(!value) return '';
     if(/^https?:\/\//i.test(value)) return value;
-    if(value.startsWith('/nithin-portfolio/')) return value;
-    if(value.startsWith('/')) return '/nithin-portfolio'+value;
-    return value.replace(/^\.\//,'');
+
+    // Resolve both Decap's /assets/... paths and relative assets/... paths from
+    // the deployed site's root. This retains /nithin-portfolio/ on GitHub Pages
+    // and resolves from / on Netlify.
+    const deploymentRoot=new URL('.', document.baseURI);
+    const path=String(value).replace(/^\.?\/+/, '');
+    return new URL(path, deploymentRoot).href;
   };
   async function load(){
     try{
@@ -26,7 +30,7 @@
   function renderFiles(folder){
     breadcrumb.innerHTML='<a href="design.html"><i class="fa-solid fa-arrow-left me-2"></i>All Design Folders</a><span class="mx-2">/</span><span>'+esc(folder.name)+'</span>';
     const files=folder.files||[];
-    const cards=files.map(f=>{const src=imageUrl(f.image);return `<div class="col-md-6 col-lg-4"><a class="file-card glightbox" href="${esc(src||'#')}" data-gallery="${esc(folder.slug)}" data-title="${esc(f.title)}"><div class="file-preview">${src?`<img src="${esc(src)}" alt="${esc(f.title)}" loading="lazy">`:'<div class="file-placeholder"><i class="fa-regular fa-file-image"></i></div>'}</div><div class="file-info"><h3>${esc(f.title)}</h3>${f.description?`<p>${esc(f.description)}</p>`:''}</div></a></div>`}).join('');
+    const cards=files.map(f=>{const src=imageUrl(f.image);const content=`<div class="file-preview">${src?`<img src="${esc(src)}" alt="${esc(f.title)}" loading="lazy">`:'<div class="file-placeholder"><i class="fa-regular fa-file-image"></i></div>'}</div><div class="file-info"><h3>${esc(f.title)}</h3>${f.description?`<p>${esc(f.description)}</p>`:''}</div>`;return `<div class="col-md-6 col-lg-4">${src?`<a class="file-card glightbox" href="${esc(src)}" data-gallery="${esc(folder.slug)}" data-title="${esc(f.title)}">${content}</a>`:`<div class="file-card file-card-static">${content}</div>`}</div>`}).join('');
     app.innerHTML=`<div class="file-toolbar"><div class="folder-heading"><h2>${esc(folder.name)}</h2><p>${esc(folder.description||'')}</p></div><a class="back-link" href="design.html"><i class="fa-solid fa-arrow-left"></i>Back to folders</a></div>${files.length?`<div class="row g-4">${cards}</div>`:'<div class="empty-files"><i class="fa-regular fa-folder-open d-block"></i><div>No files in this folder yet.</div><small>Add images from the Design Portfolio section in Admin.</small></div>'}`;
     if(window.GLightbox) GLightbox({selector:'.glightbox'});
   }

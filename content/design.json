@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "name": "Photoshop",
+      "slug": "photoshop",
+      "description": "Photo editing, digital artwork, and visual compositions created in Adobe Photoshop.",
+      "icon": "fa-solid fa-wand-magic-sparkles",
+      "files": []
+    },
+    {
+      "name": "Illustrator",
+      "slug": "illustrator",
+      "description": "Vector artwork, logos, and illustrations created in Adobe Illustrator.",
+      "icon": "fa-solid fa-pen-nib",
+      "files": []
+    },
+    {
+      "name": "CorelDRAW",
+      "slug": "coreldraw",
+      "description": "Print-ready layouts, graphics, and creative work created in CorelDRAW.",
+      "icon": "fa-solid fa-bezier-curve",
+      "files": []
+    }
+  ]
+}

@@ -20,7 +20,8 @@ The CMS edits:
 - Why Me
 - All projects
 - Project images, technologies and links
-- Design gallery
+- Design gallery (homepage, unchanged)
+- Design Portfolio folders and their images (managed separately in the Design Portfolio CMS collection)
 - Footer
 
 ## Important CMS authentication note
