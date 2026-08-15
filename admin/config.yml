@@ -7,7 +7,7 @@ backend:
   site_domain: warm-otter-5f2bd0.netlify.app
 
 media_folder: "assets/img/uploads"
-public_folder: "/assets/img/uploads"
+public_folder: "assets/img/uploads"
 publish_mode: simple
 site_url: https://nithinsp-1522.github.io/nithin-portfolio/
 display_url: https://nithinsp-1522.github.io/nithin-portfolio/
