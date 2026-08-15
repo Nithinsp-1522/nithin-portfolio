@@ -5,7 +5,12 @@
       "slug": "photoshop",
       "description": "Photo editing, digital artwork, and visual compositions created in Adobe Photoshop.",
       "icon": "fa-solid fa-wand-magic-sparkles",
-      "files": []
+      "files": [
+        {
+          "image": "assets/img/uploads/iron-man-marvel-superheroes-amoled-pitch-black-minimal-art-7680x6200-6293.png",
+          "title": "Iorn Man"
+        }
+      ]
     },
     {
       "name": "Illustrator",
