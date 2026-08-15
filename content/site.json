@@ -19,7 +19,13 @@
       "I’m continuously learning new tools, technologies, and creative techniques to improve my skills and deliver high-quality, creative, and user-focused solutions."
     ]
   },
-  "whatIDo": [],
+  "whatIDo": [
+    {
+      "title": "Graphic Design",
+      "icon": "fa-thin fa-pen-nib",
+      "description": "Do all Designs"
+    }
+  ],
   "skills": [],
   "education": [
     {
