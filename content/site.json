@@ -56,11 +56,28 @@
       "title": "Design Skills",
       "icon": "fa-solid fa-image",
       "items": [
-        "Adobe Photoshop — Photo Editing & Retouching",
-        "Adobe Illustrator — Vector Design & Illustration",
-        "CorelDRAW — Print & Graphic Design",
-        "Logo Design — Branding & Visual Identity",
-        "Poster Design — Promotional & Event Graphics"
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "CorelDRAW",
+        "Logo Design",
+        "Poster Design",
+        "Typography",
+        "Image Manipulation",
+        "Print Design"
+      ]
+    },
+    {
+      "title": "Development Skills",
+      "icon": "fa-solid fa-layer-group",
+      "items": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Python",
+        "Django",
+        "Responsive Web Design",
+        "Database Integration",
+        "Git & GitHub"
       ]
     }
   ],
