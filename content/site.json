@@ -44,6 +44,11 @@
       "title": "Full Stack Development",
       "icon": "fa-solid fa-code",
       "description": "Building functional and responsive web applications using HTML, CSS, JavaScript, Python, and Django."
+    },
+    {
+      "title": "UI/UX & Creative Solutions",
+      "icon": "fa-solid fa-layer-group",
+      "description": "Combining design and technology to create attractive, intuitive, and practical digital experiences."
     }
   ],
   "skills": [],
