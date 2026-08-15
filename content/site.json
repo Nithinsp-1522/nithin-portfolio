@@ -53,8 +53,36 @@
   ],
   "skills": [
     {
-      "title": "Photoshop · Illustrator · CorelDRAW · HTML5 · CSS3 · JavaScript · Python · Django · UI Design · Branding · Photo Editing · Responsive Web Design · Git & GitHub",
+      "title": "Adobe Photoshop",
       "icon": "fa-solid fa-image"
+    },
+    {
+      "title": "Adobe Illustrator",
+      "icon": "fa-solid fa-pen-nib"
+    },
+    {
+      "title": "CorelDRAW",
+      "icon": "fa-solid fa-palette"
+    },
+    {
+      "title": "HTML5",
+      "icon": "fa-brands fa-html5"
+    },
+    {
+      "title": "CSS3",
+      "icon": "fa-brands fa-css3-alt"
+    },
+    {
+      "title": "JavaScript",
+      "icon": "fa-brands fa-js"
+    },
+    {
+      "title": "Python",
+      "icon": "fa-brands fa-python"
+    },
+    {
+      "title": "Django",
+      "icon": "fa-solid fa-server"
     }
   ],
   "education": [
