@@ -2,14 +2,35 @@
   "projects": [
     {
       "featured": true,
-      "order": 1,
+      "order": 4,
       "title": "Mobile Shopping Website",
       "category": "E-Commerce / Web Application",
       "description": "An online mobile shopping website designed for browsing and purchasing smartphones. The project includes product listings, categories, product details, shopping cart, and a user-friendly shopping experience.",
       "technologies": [
-        "HTML · CSS · JavaScript · Python · Django",
-        "Python · Django"
-      ]
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python",
+        "Django",
+        "Mysql"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "featured": true,
+      "order": 1,
+      "title": "Yellow Banyan",
+      "category": "E-Commerce / Web Application",
+      "description": "Yellow Banyan is a complete e-commerce website developed for online shopping. It includes product and category management, brands, product filtering, shopping cart, checkout, and an admin management system.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python",
+        "Django",
+        "MySQL"
+      ],
+      "liveUrl": "https://www.yellowbanyan.com/"
     }
   ]
 }
