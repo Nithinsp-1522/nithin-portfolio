@@ -22,8 +22,28 @@
   "whatIDo": [
     {
       "title": "Graphic Design",
-      "icon": "fa-thin fa-pen-nib",
-      "description": "Do all Designs"
+      "icon": "fa-solid fa-pen-nib",
+      "description": "Creating creative and professional designs for brands, businesses, events, and social media."
+    },
+    {
+      "title": "Branding & Logo Design",
+      "icon": "fa-solid fa-palette",
+      "description": "Designing unique logos and visual identities that give brands a strong and memorable presence."
+    },
+    {
+      "title": "Photo Editing & Retouching",
+      "icon": "fa-solid fa-image",
+      "description": "Professional photo editing, retouching, manipulation, background removal, and image enhancement."
+    },
+    {
+      "title": "Web Design",
+      "icon": "fa-solid fa-desktop",
+      "description": "Designing clean, responsive, and user-friendly websites with a focus on modern visual experiences."
+    },
+    {
+      "title": "Full Stack Development",
+      "icon": "fa-solid fa-code",
+      "description": "Building functional and responsive web applications using HTML, CSS, JavaScript, Python, and Django."
     }
   ],
   "skills": [],
