@@ -51,7 +51,12 @@
       "description": "Combining design and technology to create attractive, intuitive, and practical digital experiences."
     }
   ],
-  "skills": [],
+  "skills": [
+    {
+      "title": "Photoshop · Illustrator · CorelDRAW · HTML5 · CSS3 · JavaScript · Python · Django · UI Design · Branding · Photo Editing · Responsive Web Design · Git & GitHub",
+      "icon": "fa-solid fa-image"
+    }
+  ],
   "education": [
     {
       "year": "2020 - 2021",
