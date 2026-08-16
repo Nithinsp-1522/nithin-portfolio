@@ -13,19 +13,6 @@
       "description": "Vector artwork, logos, and illustrations created in Adobe Illustrator.",
       "icon": "fa-solid fa-pen-nib",
       "files": []
-    },
-    {
-      "name": "CorelDRAW",
-      "slug": "coreldraw",
-      "description": "Print-ready layouts, graphics, and creative work created in CorelDRAW.",
-      "icon": "fa-solid fa-bezier-curve",
-      "files": [
-        {
-          "file": "assets/img/uploads/corel-file-sample.cdr",
-          "title": "Corel Sample ",
-          "image": "assets/img/uploads/anish.jpg"
-        }
-      ]
     }
   ]
 }
