@@ -5,13 +5,7 @@
       "slug": "photoshop",
       "description": "Photo editing, digital artwork, and visual compositions created in Adobe Photoshop.",
       "icon": "fa-solid fa-wand-magic-sparkles",
-      "files": [
-        {
-          "image": "assets/img/uploads/anish.jpg",
-          "title": "Wedding Caricature ",
-          "description": "Wedding Caricature photo frame "
-        }
-      ]
+      "files": []
     },
     {
       "name": "Illustrator",
