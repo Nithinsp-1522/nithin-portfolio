@@ -289,25 +289,11 @@
 }
 
 
-/* File type label */
+/* Hide file type label */
 
-.file-topline {
-    margin-bottom: 10px
-}
-
+.file-topline,
 .file-type {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-
-    color: var(--accent);
-
-    font-size: .72rem;
-    font-weight: 800;
-
-    letter-spacing: .08em;
-
-    text-transform: uppercase
+    display: none
 }
 
 
@@ -334,27 +320,30 @@
 /* Original filename */
 
 .file-name {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
+    display: block;
 
     color: #70829B;
 
-    font-size: .74rem;
+    font-size: .82rem;
 
     line-height: 1.4;
 
     word-break: break-all;
 
-    padding: 9px 10px;
+    padding: 0;
 
-    border-radius: 9px;
+    background: none;
 
-    background: rgba(255, 255, 255, .025);
-
-    border: 1px solid rgba(255, 255, 255, .06);
+    border: 0;
 
     margin-top: auto
+}
+
+
+/* Hide filename icon */
+
+.file-name i {
+    display: none
 }
 
 
