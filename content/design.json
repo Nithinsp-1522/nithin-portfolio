@@ -28,7 +28,8 @@
       "files": [
         {
           "file": "assets/img/uploads/corel-file-sample.cdr",
-          "title": "Corel Sample "
+          "title": "Corel Sample ",
+          "image": "assets/img/uploads/anish.jpg"
         }
       ]
     }
