@@ -117,23 +117,7 @@ collections:
               - {label: Featured, name: featured, widget: boolean, default: true}
               - {label: Display Order, name: order, widget: number, default: 1}
 
-  - name: gallery
-    label: Design Gallery
-    files:
-      - name: gallery
-        label: Gallery Images
-        file: content/gallery.json
-        format: json
-        fields:
-          - label: Images
-            name: images
-            widget: list
-            fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Image, name: image, widget: image}
-              - {label: Description, name: description, widget: string, required: false}
-
-  - name: design_portfolio
+    - name: design_portfolio
     label: Design Portfolio
     files:
       - name: folders
@@ -146,16 +130,35 @@ collections:
             widget: list
             summary: "{{fields.name}}"
             fields:
+
               - {label: Folder Name, name: name, widget: string}
-              - {label: URL Slug, name: slug, widget: string, hint: "Use lowercase letters, numbers, and hyphens only. Keep this unchanged after publishing links."}
+
+              - {label: URL Slug, name: slug, widget: string, hint: "Use lowercase letters, numbers, and hyphens only."}
+
               - {label: Description, name: description, widget: text, required: false}
+
               - {label: Font Awesome Icon, name: icon, widget: string, required: false, default: "fa-solid fa-folder"}
-              - label: Images / Files
+
+              - label: Portfolio Files
                 name: files
                 widget: list
                 required: false
-                summary: "{{fields.title}}"
+                summary: "{{fields.title}} — {{fields.file}}"
+
                 fields:
+
                   - {label: Title, name: title, widget: string}
+
                   - {label: Description, name: description, widget: text, required: false}
-                  - {label: Image, name: image, widget: image, required: false}
+
+                  - label: Source File
+                    name: file
+                    widget: file
+                    required: true
+                    hint: "Upload PSD, AI, PDF, CDR, JPG, PNG, WEBP, SVG or other portfolio files."
+
+                  - label: Preview Image
+                    name: image
+                    widget: image
+                    required: false
+                    hint: "Optional image preview for PSD, AI, PDF or CDR files."
