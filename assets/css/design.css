@@ -1,1 +1,460 @@
-.design-page{min-height:100vh}.design-hero{padding-top:150px;padding-bottom:70px;background:radial-gradient(circle at 78% 28%,rgba(34,211,238,.08),transparent 25%),radial-gradient(circle at 18% 70%,rgba(59,130,246,.08),transparent 30%)}.design-intro{max-width:700px;font-size:1.08rem}.design-breadcrumb{margin-top:32px;min-height:30px}.design-breadcrumb a{color:var(--accent);text-decoration:none}.design-breadcrumb span{color:var(--muted)}.folder-card{height:100%;display:block;padding:32px;text-decoration:none;color:var(--text);background:linear-gradient(145deg,#142137,#0D1728);border:1px solid var(--line);border-radius:20px;transition:.3s;position:relative;overflow:hidden}.folder-card:before{content:"";position:absolute;inset:auto -30px -70px auto;width:180px;height:180px;border-radius:50%;background:rgba(59,130,246,.10)}.folder-card:hover{transform:translateY(-7px);border-color:#3E5F8A;color:var(--text);box-shadow:0 25px 70px rgba(2,8,23,.28)}.folder-icon{width:72px;height:58px;border-radius:10px 10px 14px 14px;background:#1C3150;border:1px solid #355174;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.7rem;margin-bottom:28px;position:relative}.folder-icon:before{content:"";position:absolute;left:8px;top:-9px;width:28px;height:13px;border-radius:6px 6px 0 0;background:#26456D}.folder-card h2{font-family:"Space Grotesk";font-size:1.65rem;margin-bottom:10px}.folder-card p{color:var(--muted);line-height:1.7;margin-bottom:0}.folder-count{margin-top:22px;color:#7FA7DD;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}.file-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:28px}.back-link{display:inline-flex;align-items:center;gap:9px;color:var(--accent);text-decoration:none;font-weight:600}.folder-heading h2{font-family:"Space Grotesk";font-size:2.6rem;margin:0}.folder-heading p{color:var(--muted);margin:.45rem 0 0}.file-card{display:block;text-decoration:none;color:var(--text);height:100%;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.3s}.file-card:hover{transform:translateY(-5px);border-color:#3E5F8A;color:var(--text)}.file-preview{aspect-ratio:4/3;background:linear-gradient(145deg,#17243A,#0E182A);display:flex;align-items:center;justify-content:center;overflow:hidden}.file-preview img{width:100%;height:100%;object-fit:cover}.file-placeholder{font-size:2.2rem;color:#52627A}.file-info{padding:18px}.file-info h3{font-family:"Space Grotesk";font-size:1.1rem;margin:0 0 7px}.file-info p{color:var(--muted);font-size:.88rem;line-height:1.6;margin:0}.empty-files{padding:55px 25px;text-align:center;border:1px dashed #334764;border-radius:18px;color:var(--muted)}.empty-files i{font-size:2rem;color:var(--accent);margin-bottom:14px}.design-loading{color:var(--muted)}@media(max-width:767px){.design-hero{padding-top:120px}.folder-card{padding:25px}.file-toolbar{align-items:flex-start;flex-direction:column}.folder-heading h2{font-size:2rem}}
+.design-page {
+    min-height: 100vh
+}
+
+.design-hero {
+    padding-top: 150px;
+    padding-bottom: 70px;
+    background: radial-gradient(circle at 78% 28%, rgba(34, 211, 238, .08), transparent 25%), radial-gradient(circle at 18% 70%, rgba(59, 130, 246, .08), transparent 30%)
+}
+
+.design-intro {
+    max-width: 700px;
+    font-size: 1.08rem
+}
+
+.design-breadcrumb {
+    margin-top: 32px;
+    min-height: 30px
+}
+
+.design-breadcrumb a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+.design-breadcrumb span {
+    color: var(--muted)
+}
+
+.folder-card {
+    height: 100%;
+    display: block;
+    padding: 32px;
+    text-decoration: none;
+    color: var(--text);
+    background: linear-gradient(145deg, #142137, #0D1728);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    transition: .3s;
+    position: relative;
+    overflow: hidden
+}
+
+.folder-card:before {
+    content: "";
+    position: absolute;
+    inset: auto -30px -70px auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, .10)
+}
+
+.folder-card:hover {
+    transform: translateY(-7px);
+    border-color: #3E5F8A;
+    color: var(--text);
+    box-shadow: 0 25px 70px rgba(2, 8, 23, .28)
+}
+
+.folder-icon {
+    width: 72px;
+    height: 58px;
+    border-radius: 10px 10px 14px 14px;
+    background: #1C3150;
+    border: 1px solid #355174;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 1.7rem;
+    margin-bottom: 28px;
+    position: relative
+}
+
+.folder-icon:before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: -9px;
+    width: 28px;
+    height: 13px;
+    border-radius: 6px 6px 0 0;
+    background: #26456D
+}
+
+.folder-card h2 {
+    font-family: "Space Grotesk";
+    font-size: 1.65rem;
+    margin-bottom: 10px
+}
+
+.folder-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 0
+}
+
+.folder-count {
+    margin-top: 22px;
+    color: #7FA7DD;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .12em
+}
+
+.file-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600
+}
+
+.folder-heading h2 {
+    font-family: "Space Grotesk";
+    font-size: 2.6rem;
+    margin: 0
+}
+
+.folder-heading p {
+    color: var(--muted);
+    margin: .45rem 0 0
+}
+
+
+/* =========================================
+   DESIGN FILE CARDS
+   ========================================= */
+
+.file-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s
+}
+
+.file-card:hover {
+    transform: translateY(-5px);
+    border-color: #3E5F8A;
+    box-shadow: 0 20px 50px rgba(2, 8, 23, .24)
+}
+
+
+/* Preview container */
+
+.file-preview {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #111c2e;
+    overflow: hidden;
+    position: relative;
+    display: block
+}
+
+
+/* Clickable preview image */
+
+.preview-image-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none
+}
+
+
+/* Preview image */
+
+.preview-image-link img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #111c2e;
+    transition: transform .35s ease
+}
+
+.preview-image-link:hover img {
+    transform: scale(1.03)
+}
+
+
+/* Preview overlay */
+
+.preview-overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(5, 12, 24, .88);
+
+    color: #fff;
+
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    font-size: .8rem;
+    font-weight: 700;
+
+    opacity: 0;
+
+    transition: .25s;
+
+    white-space: nowrap
+}
+
+.preview-image-link:hover .preview-overlay {
+    opacity: 1
+}
+
+
+/* Non-image files:
+   PSD / AI / CDR / PDF */
+
+.file-preview-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 230px
+}
+
+
+/* File type icon */
+
+.file-type-icon {
+    width: 82px;
+    height: 96px;
+
+    border-radius: 12px;
+
+    background: #1A2A42;
+
+    border: 1px solid #365173;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--accent);
+
+    font-size: 2.4rem
+}
+
+
+/* PSD / AI / CDR / PDF label */
+
+.file-extension {
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    color: #7FA7DD
+}
+
+
+/* File information */
+
+.file-info {
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1
+}
+
+
+/* File type label */
+
+.file-topline {
+    margin-bottom: 10px
+}
+
+.file-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--accent);
+
+    font-size: .72rem;
+    font-weight: 800;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase
+}
+
+
+/* File title */
+
+.file-info h3 {
+    font-family: "Space Grotesk";
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin: 0 0 7px
+}
+
+
+/* Description */
+
+.file-info p {
+    color: var(--muted);
+    font-size: .88rem;
+    line-height: 1.6;
+    margin: 0 0 12px
+}
+
+
+/* Original filename */
+
+.file-name {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    color: #70829B;
+
+    font-size: .74rem;
+
+    line-height: 1.4;
+
+    word-break: break-all;
+
+    padding: 9px 10px;
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, .025);
+
+    border: 1px solid rgba(255, 255, 255, .06);
+
+    margin-top: auto
+}
+
+
+/* Download button */
+
+.file-actions {
+    margin-top: 14px
+}
+
+.file-download {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 11px 14px;
+
+    border-radius: 10px;
+
+    background: var(--accent);
+
+    color: #07111F;
+
+    text-decoration: none;
+
+    font-size: .82rem;
+
+    font-weight: 800;
+
+    transition: .25s
+}
+
+.file-download:hover {
+    filter: brightness(1.08);
+
+    color: #07111F;
+
+    transform: translateY(-1px)
+}
+
+.file-download-disabled {
+    background: #202C3E;
+    color: #64748B;
+    cursor: not-allowed
+}
+
+.file-download-disabled:hover {
+    filter: none;
+    transform: none
+}
+
+
+/* Empty folder */
+
+.empty-files {
+    padding: 55px 25px;
+    text-align: center;
+    border: 1px dashed #334764;
+    border-radius: 18px;
+    color: var(--muted)
+}
+
+.empty-files i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 14px
+}
+
+.design-loading {
+    color: var(--muted)
+}
+
+
+@media(max-width:767px) {
+    .design-hero {
+        padding-top: 120px
+    }
+
+    .folder-card {
+        padding: 25px
+    }
+
+    .file-toolbar {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .folder-heading h2 {
+        font-size: 2rem
+    }
+
+    .file-preview {
+        aspect-ratio: 4 / 3
+    }
+
+    .preview-overlay {
+        opacity: 1;
+        transform: translate(-50%, -50%)
+    }
+}
