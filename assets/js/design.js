@@ -334,6 +334,23 @@
 
         `;
 
+      /*
+       * Show only the original filename.
+       *
+       * Example:
+       * assets/img/uploads/corel-file-sample.cdr
+       *
+       * becomes:
+       * corel-file-sample.cdr
+       */
+      const originalFileName = f.file
+        ? String(f.file)
+            .split('?')[0]
+            .split('#')[0]
+            .split('/')
+            .pop()
+        : '';
+
       return `
 
         <div class="col-md-6 col-lg-4">
@@ -343,18 +360,6 @@
             ${previewHtml}
 
             <div class="file-info">
-
-              <div class="file-topline">
-
-                <div class="file-type">
-
-                  <i class="${esc(icon)}"></i>
-
-                  ${esc(extension)} Original file
-
-                </div>
-
-              </div>
 
               <h3>
 
@@ -370,11 +375,7 @@
 
               <div class="file-name">
 
-                <i class="fa-regular fa-file"></i>
-
-                <span>
-                  ${esc(f.file || '')}
-                </span>
+                ${esc(originalFileName)}
 
               </div>
 
