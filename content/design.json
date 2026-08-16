@@ -25,7 +25,12 @@
       "slug": "coreldraw",
       "description": "Print-ready layouts, graphics, and creative work created in CorelDRAW.",
       "icon": "fa-solid fa-bezier-curve",
-      "files": []
+      "files": [
+        {
+          "file": "assets/img/uploads/corel-file-sample.cdr",
+          "title": "Corel Sample "
+        }
+      ]
     }
   ]
 }
