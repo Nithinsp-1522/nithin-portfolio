@@ -117,47 +117,38 @@ collections:
               - {label: Featured, name: featured, widget: boolean, default: true}
               - {label: Display Order, name: order, widget: number, default: 1}
 
-- name: design_portfolio
-  label: Design Portfolio
-  files:
-    - name: folders
-      label: Design Folders
-      file: content/design.json
-      format: json
-      fields:
-        - label: Folders / Categories
-          name: folders
-          widget: list
-          summary: "{{fields.name}}"
-
-          fields:
-            - {label: Folder Name, name: name, widget: string}
-
-            - {label: URL Slug, name: slug, widget: string, hint: "Use lowercase letters, numbers, and hyphens only. Keep this unchanged after publishing links."}
-
-            - {label: Description, name: description, widget: text, required: false}
-
-            - {label: Font Awesome Icon, name: icon, widget: string, required: false, default: "fa-solid fa-folder"}
-
-            - label: Portfolio Files
-              name: files
-              widget: list
-              required: false
-              summary: "{{fields.title}}"
-
-              fields:
-                - {label: Title, name: title, widget: string}
-
-                - {label: Description, name: description, widget: text, required: false}
-
-                - label: Source File
-                  name: file
-                  widget: file
-                  required: true
-                  hint: "Upload the original PSD, AI, CDR, PDF, JPG, PNG, ZIP or other portfolio file."
-
-                - label: Preview Image
-                  name: image
-                  widget: image
-                  required: false
-                  hint: "Optional JPG or PNG preview shown on the website."
+  - name: design_portfolio
+    label: Design Portfolio
+    files:
+      - name: folders
+        label: Design Folders
+        file: content/design.json
+        format: json
+        fields:
+          - label: Folders / Categories
+            name: folders
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - {label: Folder Name, name: name, widget: string}
+              - {label: URL Slug, name: slug, widget: string, hint: "Use lowercase letters, numbers, and hyphens only. Keep this unchanged after publishing links."}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Font Awesome Icon, name: icon, widget: string, required: false, default: "fa-solid fa-folder"}
+              - label: Portfolio Files
+                name: files
+                widget: list
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: description, widget: text, required: false}
+                  - label: Source File
+                    name: file
+                    widget: file
+                    required: true
+                    hint: "Upload the original PSD, AI, CDR, PDF, JPG, PNG, ZIP or other portfolio file."
+                  - label: Preview Image
+                    name: image
+                    widget: image
+                    required: false
+                    hint: "Optional JPG or PNG preview shown on the website."
