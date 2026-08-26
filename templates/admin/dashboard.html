@@ -1,0 +1,19 @@
+{% extends "admin/base.html" %}
+{% block title %}Dashboard · Kurinji Admin{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-start mb-4"><div><h1 class="h3 mb-1">Dashboard</h1><div class="text-secondary">Control the Kurinji website and operations from one place.</div></div></div>
+<div class="row g-3 mb-4">
+  <div class="col-xl-2 col-md-4 col-6"><div class="card p-3"><div class="small text-secondary">Active Team</div><div class="metric">{{ counts.team }}</div></div></div>
+  <div class="col-xl-2 col-md-4 col-6"><div class="card p-3"><div class="small text-secondary">Programs</div><div class="metric">{{ counts.programs }}</div></div></div>
+  <div class="col-xl-2 col-md-4 col-6"><div class="card p-3"><div class="small text-secondary">Gallery</div><div class="metric">{{ counts.gallery }}</div></div></div>
+  <div class="col-xl-2 col-md-4 col-6"><div class="card p-3"><div class="small text-secondary">New Messages</div><div class="metric">{{ counts.messages }}</div></div></div>
+  <div class="col-xl-2 col-md-4 col-6"><div class="card p-3"><div class="small text-secondary">New Applications</div><div class="metric">{{ counts.applications }}</div></div></div>
+  <div class="col-xl-2 col-md-4 col-6"><div class="card p-3"><div class="small text-secondary">Pending Payments</div><div class="metric">{{ counts.pending_payments }}</div></div></div>
+</div>
+<div class="row g-4">
+  <div class="col-lg-7"><div class="card p-4"><h2 class="h5 mb-3">Finance overview</h2><div class="row g-3"><div class="col-md-4"><div class="small text-secondary">Paid payments</div><div class="fs-4 fw-bold">₹{{ finance.payments|floatformat:2 }}</div></div><div class="col-md-4"><div class="small text-secondary">Expenses</div><div class="fs-4 fw-bold">₹{{ finance.expenses|floatformat:2 }}</div></div><div class="col-md-4"><div class="small text-secondary">Paid salaries</div><div class="fs-4 fw-bold">₹{{ finance.salaries|floatformat:2 }}</div></div></div></div></div>
+  <div class="col-lg-5"><div class="card p-4"><h2 class="h5 mb-3">Quick actions</h2><div class="d-grid gap-2"><a class="btn btn-dark" href="{% url 'admin-team' %}">Manage Team</a><a class="btn btn-outline-dark" href="{% url 'admin-content' %}">Edit Website Content</a><a class="btn btn-outline-dark" href="{% url 'admin-applications' %}">Review Join Us Applications</a></div></div></div>
+  <div class="col-lg-6"><div class="card p-4"><h2 class="h5">Recent contact messages</h2>{% for item in recent_messages %}<div class="py-2 border-bottom"><strong>{{ item.name }}</strong><span class="badge badge-soft float-end">{{ item.status }}</span><div class="small text-secondary">{{ item.subject|default:"No subject" }}</div></div>{% empty %}<div class="text-secondary">No messages yet.</div>{% endfor %}</div></div>
+  <div class="col-lg-6"><div class="card p-4"><h2 class="h5">Recent applications</h2>{% for item in recent_applications %}<div class="py-2 border-bottom"><strong>{{ item.name }}</strong><span class="badge badge-soft float-end">{{ item.status }}</span><div class="small text-secondary">{{ item.phone }}</div></div>{% empty %}<div class="text-secondary">No applications yet.</div>{% endfor %}</div></div>
+</div>
+{% endblock %}
