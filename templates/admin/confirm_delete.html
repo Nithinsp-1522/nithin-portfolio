@@ -1,5 +1,5 @@
 {% extends "admin/base.html" %}
 {% block title %}Delete · Kurinji Admin{% endblock %}
 {% block content %}
-<div class="card p-4" style="max-width:620px"><h1 class="h4">Delete {{ model._meta.verbose_name }}?</h1><p class="text-secondary">You are about to permanently delete <strong>{{ object }}</strong>. This cannot be undone.</p><form method="post">{% csrf_token %}<button class="btn btn-danger">Yes, delete</button> <a class="btn btn-outline-secondary" href="{% url 'admin-'|add:section %}">Cancel</a></form></div>
+<div class="card p-4" style="max-width:620px"><h1 class="h4">Delete {{ model._meta.verbose_name }}?</h1><p class="text-secondary">You are about to permanently delete <strong>{{ object }}</strong>. This cannot be undone.</p><form method="post">{% csrf_token %}<input type="hidden" name="model" value="{{ model.__name__ }}"><button class="btn btn-danger">Yes, delete</button> <a class="btn btn-outline-secondary" href="{% url 'admin-'|add:section %}?model={{ model.__name__ }}">Cancel</a></form></div>
 {% endblock %}
