@@ -1,24 +1,20 @@
 from decimal import Decimal
 
+from django import forms
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
-from django.db.models import Sum
+from django.db.models import Sum, Q
 from django.http import Http404, HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
-from django.views import View
-from django import forms
 
 from .models import (
     ContactMessage, Expense, GalleryItem, JoinApplication, NavigationItem,
     PageSection, Payment, Program, Salary, SiteSettings, Song, StaffProfile,
     TeamMember,
 )
-
 
 MODEL_MAP = {
     "content": {"label": "Website Content", "models": [SiteSettings, NavigationItem, PageSection]},
@@ -50,6 +46,7 @@ class AdminLoginView(LoginView):
 
 
 def admin_logout(request):
+    from django.contrib.auth import logout
     logout(request)
     return redirect("admin-login")
 
@@ -65,11 +62,9 @@ def role_for(user):
 
 
 def can_view(user, model):
-    if user.is_superuser:
+    if user.is_superuser or role_for(user) in {"owner", "admin"}:
         return True
     role = role_for(user)
-    if role in {"owner", "admin"}:
-        return True
     if role == "editor":
         return model in CONTENT_MODELS or model in INBOX_MODELS
     if role == "finance":
@@ -94,26 +89,38 @@ def model_for_section(section):
     return config
 
 
-def model_for_section_and_pk(section, pk=None):
+def _get_model(section, request):
     config = model_for_section(section)
-    models = config["models"]
-    if len(models) == 1:
-        model = models[0]
+    if len(config["models"]) == 1:
+        model = config["models"][0]
     else:
-        model = None
-        if pk is not None:
-            # The content section is grouped; its URLs include model name via query parameter.
-            model_name = None
-        else:
-            model_name = None
-        if not model_name:
-            model = SiteSettings
+        model_name = request.GET.get("model") or request.POST.get("model") or request.GET.get("type")
+        model = next((m for m in config["models"] if m.__name__.lower() == (model_name or "").lower()), config["models"][0])
+    if not can_view(request.user, model):
+        raise Http404("Admin section unavailable")
     return model
 
 
+def _form_for(model):
+    Meta = type("Meta", (), {"model": model, "fields": "__all__", "exclude": ["created_at", "updated_at"]})
+    return type(f"{model.__name__}AdminForm", (forms.ModelForm,), {"Meta": Meta})
+
+
+def _display_value(obj, field):
+    value = getattr(obj, field.name, "")
+    if value in (None, ""):
+        return "—"
+    if field.many_to_one:
+        return str(value)
+    if isinstance(value, bool):
+        return "Yes" if value else "No"
+    if field.name in {"image", "photo", "logo", "favicon", "audio_file", "receipt"} and value:
+        return "Attached"
+    return str(value)
+
+
+@login_required
 def dashboard(request):
-    if not request.user.is_authenticated:
-        return redirect("admin-login")
     context = {
         "role": role_for(request.user),
         "counts": {
@@ -135,45 +142,7 @@ def dashboard(request):
     return render(request, "admin/dashboard.html", context)
 
 
-def _get_model(section, request):
-    config = model_for_section(section)
-    if len(config["models"]) == 1:
-        model = config["models"][0]
-    else:
-        model_name = request.GET.get("model") or request.POST.get("model") or request.GET.get("type")
-        if model_name:
-            model = next((m for m in config["models"] if m.__name__.lower() == model_name.lower()), None)
-        else:
-            model = config["models"][0]
-    if model is None or not can_view(request.user, model):
-        raise Http404("Admin section unavailable")
-    return model
-
-
-def _form_for(model, instance=None):
-    Meta = type("Meta", (), {
-        "model": model,
-        "fields": "__all__",
-        "exclude": ["created_at", "updated_at"],
-    })
-    return type(f"{model.__name__}AdminForm", (forms.ModelForm,), {"Meta": Meta})
-
-
-def _display_value(obj, field):
-    value = getattr(obj, field.name, "")
-    if value in (None, ""):
-        return "—"
-    if field.many_to_one:
-        return str(value)
-    if isinstance(value, bool):
-        return "Yes" if value else "No"
-    if field.name in {"image", "photo", "logo", "favicon", "audio_file", "receipt"} and value:
-        return "Attached"
-    return str(value)
-
-
 @login_required
-
 def model_list(request, section):
     model = _get_model(section, request)
     config = model_for_section(section)
@@ -181,32 +150,27 @@ def model_list(request, section):
     q = request.GET.get("q", "").strip()
     if q:
         searchable = [f.name for f in model._meta.fields if getattr(f, "max_length", None) or f.get_internal_type() in {"TextField", "EmailField"}]
-        from django.db.models import Q
         query = Q()
         for name in searchable:
             query |= Q(**{f"{name}__icontains": q})
         qs = qs.filter(query)
     fields = [f for f in model._meta.fields if f.name not in {"id", "created_at", "updated_at"}]
+    objects = list(qs[:100])
+    rows = [{"object": obj, "values": [_display_value(obj, field) for field in fields[:5]]} for obj in objects]
     return render(request, "admin/list.html", {
-        "section": section,
-        "section_label": config["label"],
-        "model": model,
-        "objects": qs[:100],
-        "fields": fields[:5],
-        "can_change": can_change(request.user, model),
-        "models": config["models"],
-        "search": q,
+        "section": section, "section_label": config["label"], "model": model,
+        "objects": objects, "rows": rows, "fields": fields[:5],
+        "can_change": can_change(request.user, model), "models": config["models"], "search": q,
     })
 
 
 @login_required
-
 def model_form(request, section, action, pk=None):
     model = _get_model(section, request)
     if not can_change(request.user, model):
         return HttpResponseForbidden("You do not have permission to change this section.")
     instance = get_object_or_404(model, pk=pk) if action == "edit" else None
-    Form = _form_for(model, instance)
+    Form = _form_for(model)
     if request.method == "POST":
         form = Form(request.POST, request.FILES, instance=instance)
         if form.is_valid():
@@ -215,17 +179,10 @@ def model_form(request, section, action, pk=None):
             return redirect(reverse("admin-" + section) + (f"?model={model.__name__}" if len(model_for_section(section)["models"]) > 1 else ""))
     else:
         form = Form(instance=instance)
-    return render(request, "admin/form.html", {
-        "section": section,
-        "section_label": model_for_section(section)["label"],
-        "model": model,
-        "form": form,
-        "action": action,
-    })
+    return render(request, "admin/form.html", {"section": section, "section_label": model_for_section(section)["label"], "model": model, "form": form, "action": action})
 
 
 @login_required
-
 def model_delete(request, section, pk):
     model = _get_model(section, request)
     if not can_change(request.user, model):
