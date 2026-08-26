@@ -21,6 +21,94 @@ collections:
         file: content/site.json
         format: json
         fields:
+          - label: Site Settings
+            name: site
+            widget: object
+            fields:
+              - {label: Brand Name, name: brand, widget: string}
+              - {label: Browser Title, name: metaTitle, widget: string}
+              - {label: SEO Description, name: metaDescription, widget: text}
+              - label: Navigation
+                name: nav
+                widget: list
+                summary: "{{fields.label}} → {{fields.href}}"
+                fields:
+                  - {label: Label, name: label, widget: string}
+                  - {label: Link / URL, name: href, widget: string}
+                  - label: Style
+                    name: style
+                    widget: select
+                    options:
+                      - {label: Normal Link, value: link}
+                      - {label: Green Button, value: success}
+                      - {label: Blue Button, value: accent}
+                  - {label: Open in New Tab, name: external, widget: boolean, default: false, required: false}
+              - label: Hero Buttons
+                name: heroButtons
+                widget: object
+                fields:
+                  - {label: Projects Button, name: projects, widget: string}
+                  - {label: Contact Button, name: contact, widget: string}
+                  - {label: Resume Button, name: resume, widget: string}
+              - label: Hero Code Card
+                name: codeCard
+                widget: object
+                fields:
+                  - {label: Show Code Card, name: enabled, widget: boolean, default: true}
+                  - {label: Role Text, name: role, widget: string}
+                  - {label: Boolean Label, name: creativeLabel, widget: string}
+                  - {label: Boolean Value, name: creativeValue, widget: string}
+              - label: Section Labels and Text
+                name: sections
+                widget: object
+                fields:
+                  - {label: About Kicker, name: aboutKicker, widget: string}
+                  - {label: What I Do Kicker, name: whatIDoKicker, widget: string}
+                  - {label: What I Do Title, name: whatIDoTitle, widget: string}
+                  - {label: What I Do Accent, name: whatIDoAccent, widget: string}
+                  - {label: What I Do Description, name: whatIDoDescription, widget: text}
+                  - {label: Skills Kicker, name: skillsKicker, widget: string}
+                  - {label: Skills Title, name: skillsTitle, widget: string}
+                  - {label: Skills Accent, name: skillsAccent, widget: string}
+                  - {label: Projects Kicker, name: projectsKicker, widget: string}
+                  - {label: Projects Title, name: projectsTitle, widget: string}
+                  - {label: Projects Accent, name: projectsAccent, widget: string}
+                  - {label: Projects Description, name: projectsDescription, widget: text}
+                  - {label: Gallery Kicker, name: galleryKicker, widget: string}
+                  - {label: Gallery Title, name: galleryTitle, widget: string}
+                  - {label: Gallery Accent, name: galleryAccent, widget: string}
+                  - {label: Gallery Description, name: galleryDescription, widget: text}
+                  - {label: Education Kicker, name: educationKicker, widget: string}
+                  - {label: Education Title, name: educationTitle, widget: string}
+                  - {label: Education Accent, name: educationAccent, widget: string}
+                  - {label: Why Me Kicker, name: whyKicker, widget: string}
+                  - {label: Why Me Title, name: whyTitle, widget: string}
+                  - {label: Why Me Accent, name: whyAccent, widget: string}
+                  - {label: Contact Kicker, name: contactKicker, widget: string}
+                  - {label: Project Live Button, name: projectLiveLabel, widget: string}
+                  - {label: Project GitHub Button, name: projectGithubLabel, widget: string}
+              - label: Design Page Text
+                name: design
+                widget: object
+                fields:
+                  - {label: Back to Portfolio, name: navBackLabel, widget: string}
+                  - {label: Hero Kicker, name: heroKicker, widget: string}
+                  - {label: Hero Title, name: heroTitle, widget: string}
+                  - {label: Hero Accent, name: heroAccent, widget: string}
+                  - {label: Hero Description, name: heroDescription, widget: text}
+                  - {label: Loading Text, name: loadingText, widget: string}
+                  - {label: Breadcrumb Home, name: breadcrumbHome, widget: string}
+                  - {label: All Folders Label, name: allFoldersLabel, widget: string}
+                  - {label: Back to Folders, name: backToFolders, widget: string}
+                  - {label: Folder Kicker, name: folderKicker, widget: string}
+                  - {label: Files Label, name: filesLabel, widget: string}
+                  - {label: Open Folder Label, name: openFolderLabel, widget: string}
+                  - {label: Preview Label, name: previewLabel, widget: string}
+                  - {label: Download Label, name: downloadLabel, widget: string}
+                  - {label: Unavailable Label, name: unavailableLabel, widget: string}
+                  - {label: Empty Folder Title, name: emptyTitle, widget: string}
+                  - {label: Empty Folder Description, name: emptyDescription, widget: text}
+                  - {label: Load Error Text, name: errorText, widget: string}
           - label: Hero
             name: hero
             widget: object
@@ -80,10 +168,13 @@ collections:
               - {label: Headline, name: headline, widget: string}
               - {label: Description, name: description, widget: text}
               - {label: Email, name: email, widget: string}
+              - {label: Email Button Label, name: emailButtonLabel, widget: string, default: Email Me}
               - {label: Phone, name: phone, widget: string, required: false}
               - {label: Location, name: location, widget: string}
               - {label: GitHub URL, name: github, widget: string, required: false}
+              - {label: GitHub Button Label, name: githubButtonLabel, widget: string, default: GitHub}
               - {label: LinkedIn URL, name: linkedin, widget: string, required: false}
+              - {label: LinkedIn Button Label, name: linkedinButtonLabel, widget: string, default: LinkedIn}
               - {label: Instagram URL, name: instagram, widget: string, required: false}
           - label: Footer
             name: footer
@@ -103,6 +194,7 @@ collections:
           - label: Projects
             name: projects
             widget: list
+            summary: "{{fields.title}}"
             fields:
               - {label: Project Name, name: title, widget: string}
               - {label: Category, name: category, widget: string}
@@ -116,6 +208,22 @@ collections:
               - {label: GitHub URL, name: githubUrl, widget: string, required: false}
               - {label: Featured, name: featured, widget: boolean, default: true}
               - {label: Display Order, name: order, widget: number, default: 1}
+
+  - name: gallery
+    label: Homepage Design Gallery
+    files:
+      - name: images
+        label: Gallery Images
+        file: content/gallery.json
+        format: json
+        fields:
+          - label: Images
+            name: images
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Image, name: image, widget: image, required: true}
 
   - name: design_portfolio
     label: Design Portfolio
