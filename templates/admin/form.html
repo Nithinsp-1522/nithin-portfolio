@@ -1,0 +1,6 @@
+{% extends "admin/base.html" %}
+{% block title %}{{ action|title }} {{ model._meta.verbose_name|title }} · Kurinji Admin{% endblock %}
+{% block content %}
+<div class="mb-4"><a class="text-decoration-none" href="{% url 'admin-'|add:section %}">← Back</a><h1 class="h3 mt-3 mb-1">{{ action|title }} {{ model._meta.verbose_name|title }}</h1><div class="text-secondary">Update this record securely.</div></div>
+<div class="card p-4"><form method="post" enctype="multipart/form-data">{% csrf_token %}{% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}<div class="row g-3">{% for field in form %}<div class="col-md-6 {% if field.field.widget.attrs.rows %}col-12{% endif %}"><label class="form-label">{{ field.label }}</label>{{ field }}{% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}{% for error in field.errors %}<div class="text-danger small">{{ error }}</div>{% endfor %}</div>{% endfor %}</div><div class="mt-4 d-flex gap-2"><button class="btn btn-dark">Save</button><a class="btn btn-outline-secondary" href="{% url 'admin-'|add:section %}">Cancel</a></div></form></div>
+{% endblock %}
