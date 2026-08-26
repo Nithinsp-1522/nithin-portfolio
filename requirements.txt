@@ -1,0 +1,4 @@
+Django>=5.2,<5.3
+whitenoise>=6.9,<7
+Pillow>=11.0,<12
+psycopg[binary]>=3.2,<4
