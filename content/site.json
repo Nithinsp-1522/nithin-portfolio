@@ -1,76 +1,194 @@
 {
+  "contact": {
+    "github": "",
+    "linkedinButtonLabel": "LinkedIn",
+    "emailButtonLabel": "Email Me",
+    "phone": "+91 80724 05274",
+    "instagram": "https://www.instagram.com/jimbruttan2215?igsh=Z2xnbmRzbDd5ZTdy",
+    "headline": "Get In Touch",
+    "location": "Kulasekaram, Kanyakumari",
+    "email": "spbrothers4@gmail.com",
+    "description": "Have a project in mind or looking for a creative designer and developer? Feel free to get in touch. I’m always open to discussing new projects, creative ideas, and opportunities.",
+    "linkedin": "",
+    "githubButtonLabel": "GitHub"
+  },
+  "whyMe": [
+    {
+      "title": "Creative & Technical",
+      "description": "I combine creative design skills with technical development knowledge to handle both the visual and functional sides of a project."
+    },
+    {
+      "title": "Creative Problem Solving",
+      "description": "I focus on finding simple, effective, and creative solutions that turn ideas into practical results."
+    },
+    {
+      "title": "Design + Development",
+      "description": "With experience in Photoshop, Illustrator, CorelDRAW, HTML, CSS, JavaScript, Python, and Django, I can work across both design and web development."
+    },
+    {
+      "title": "User-Focused Approach",
+      "description": "I create designs and websites that are visually appealing, responsive, easy to use, and focused on the user's experience."
+    },
+    {
+      "title": "Attention to Detail",
+      "description": "I pay close attention to typography, spacing, colors, layouts, functionality, and overall quality."
+    },
+    {
+      "title": "Continuous Learning",
+      "description": "I continuously explore new design techniques and technologies to improve my skills and deliver better work."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Design Skills",
+      "icon": "fa-solid fa-image",
+      "items": [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "CorelDRAW",
+        "Logo Design",
+        "Poster Design",
+        "Typography",
+        "Image Manipulation",
+        "Print Design"
+      ]
+    },
+    {
+      "title": "Development Skills",
+      "icon": "fa-solid fa-layer-group",
+      "items": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Python",
+        "Django",
+        "Responsive Web Design",
+        "Database Integration",
+        "Git & GitHub"
+      ]
+    }
+  ],
   "site": {
     "brand": "NITHIN",
     "metaTitle": "Nithin S P | Portfolio",
-    "metaDescription": "Nithin S P — Full Stack Developer and Graphic Designer.",
+    "metaDescription": "Nithin S P — Graphic Designer.",
     "nav": [
-      {"label": "About", "href": "#about", "style": "link"},
-      {"label": "Skills", "href": "#skills", "style": "link"},
-      {"label": "Projects", "href": "#projects", "style": "link"},
-      {"label": "Education", "href": "#education", "style": "link"},
-      {"label": "Design", "href": "design.html", "style": "success"},
-      {"label": "Let's Talk", "href": "#contact", "style": "accent"}
+      {
+        "label": "About",
+        "href": "#about",
+        "style": "link"
+      },
+      {
+        "label": "Skills",
+        "href": "#skills",
+        "style": "link"
+      },
+      {
+        "label": "Projects",
+        "href": "#projects",
+        "style": "link"
+      },
+      {
+        "label": "Education",
+        "href": "#education",
+        "style": "link"
+      },
+      {
+        "label": "Design",
+        "href": "design.html",
+        "style": "success"
+      },
+      {
+        "label": "Let's Talk",
+        "href": "#contact",
+        "style": "accent"
+      }
     ],
-    "heroButtons": {"projects": "View My Projects", "contact": "Contact Me", "resume": "Resume"},
-    "codeCard": {"enabled": true, "role": "Full Stack Dev", "creativeLabel": "creative", "creativeValue": "true"},
+    "heroButtons": {
+      "projects": "View My Projects",
+      "contact": "Contact Me",
+      "resume": "Resume"
+    },
+    "codeCard": {
+      "enabled": true,
+      "role": "Full Stack Dev",
+      "creativeLabel": "creative",
+      "creativeValue": "true"
+    },
     "sections": {
       "aboutKicker": "01 / About",
-      "whatIDoKicker": "02 / What I Do",
-      "whatIDoTitle": "What I",
-      "whatIDoAccent": "can do.",
-      "whatIDoDescription": "Practical development, creative thinking and problem solving focused on building useful digital experiences.",
-      "skillsKicker": "03 / Skills",
-      "skillsTitle": "Tools I use to",
-      "skillsAccent": "build & create.",
-      "projectsKicker": "04 / Selected Work",
-      "projectsTitle": "Development +",
-      "projectsAccent": "creative work.",
       "projectsDescription": "A mixed portfolio highlighting both technical and visual work.",
+      "whatIDoKicker": "02 / What I Do",
+      "projectsAccent": "creative work.",
       "galleryKicker": "05 / Design",
       "galleryTitle": "A visual side of",
-      "galleryAccent": "the portfolio.",
+      "whatIDoTitle": "What I",
       "galleryDescription": "Selected graphic design work and creative experiments.",
-      "educationKicker": "06 / Education",
+      "whatIDoDescription": "Practical development, creative thinking and problem solving focused on building useful digital experiences.",
+      "skillsAccent": "build & create.",
+      "projectsKicker": "04 / Selected Work",
+      "projectLiveLabel": "Live Demo",
+      "whyTitle": "Curious. Creative.",
       "educationTitle": "Learning that",
       "educationAccent": "keeps moving.",
-      "whyKicker": "07 / Why me",
-      "whyTitle": "Curious. Creative.",
       "whyAccent": "Career focused.",
       "contactKicker": "08 / Contact",
-      "projectLiveLabel": "Live Demo",
-      "projectGithubLabel": "GitHub"
+      "skillsKicker": "03 / Skills",
+      "skillsTitle": "Tools I use to",
+      "projectGithubLabel": "GitHub",
+      "whatIDoAccent": "can do.",
+      "educationKicker": "06 / Education",
+      "whyKicker": "07 / Why me",
+      "galleryAccent": "the portfolio.",
+      "projectsTitle": "Development +"
     },
     "design": {
-      "navBackLabel": "Back to Portfolio",
-      "heroKicker": "Design Portfolio",
-      "heroTitle": "A visual side of",
-      "heroAccent": "the portfolio.",
-      "heroDescription": "Choose a design application to explore the work created with it.",
-      "loadingText": "Loading design portfolio…",
-      "breadcrumbHome": "Design",
-      "allFoldersLabel": "All Design Folders",
-      "backToFolders": "Back to folders",
       "folderKicker": "Design Portfolio",
-      "filesLabel": "files",
-      "openFolderLabel": "Open folder",
+      "breadcrumbHome": "Design",
+      "heroDescription": "Choose a design application to explore the work created with it.",
+      "backToFolders": "Back to folders",
+      "unavailableLabel": "File unavailable",
+      "heroAccent": "the portfolio.",
+      "loadingText": "Loading design portfolio…",
+      "navBackLabel": "Back to Portfolio",
+      "emptyTitle": "No files in this folder yet.",
       "previewLabel": "Preview",
       "downloadLabel": "Download Original",
-      "unavailableLabel": "File unavailable",
-      "emptyTitle": "No files in this folder yet.",
+      "heroKicker": "Design Portfolio",
       "emptyDescription": "Add files from the Design Portfolio section in Admin.",
-      "errorText": "Could not load the design portfolio."
+      "allFoldersLabel": "All Design Folders",
+      "errorText": "Could not load the design portfolio.",
+      "openFolderLabel": "Open folder",
+      "filesLabel": "files",
+      "heroTitle": "A visual side of"
     }
   },
-  "hero": {
-    "name": "Nithin S P",
-    "role": "Full Stack Developer • Graphic Designer",
-    "eyebrow": "Available for opportunities",
-    "intro": "Hi, I’m Nithin S P, a passionate Graphic Designer and Full Stack Developer who enjoys combining creativity with technology. I specialize in graphic design, photo editing, branding, digital artwork, and web development, creating visually appealing designs and functional digital experiences.\n\nI’m always eager to learn, explore new technologies, and turn ideas into creative and practical solutions.",
-    "location": "Kulasekaram, Kanyakumari",
-    "email": "spbrothers4@gmail.com",
-    "profileImage": "/assets/img/uploads/1000708629.png",
-    "resumeUrl": "https://www.dropbox.com/scl/fi/u543a4qmwf1f3icysgc23/Nithin-S-P-Resume.pdf?rlkey=xhtqx3ucg4vyeiy0ozhs5bdzg&st=hpvjnei5&dl=0"
-  },
+  "education": [
+    {
+      "year": "2020 - 2021",
+      "degree": "PYTHON FULL STACK DEVELOPER",
+      "institution": "Trinity Technology, Trivandrum",
+      "description": "Python full Stack developer, Stonge Knowledge in Python, Django, HTML, Css and Js"
+    },
+    {
+      "year": "2015-2018",
+      "degree": "B.Com (CA)",
+      "institution": "Nesamony Memorial Christian College, Marthandam",
+      "description": "Percentage: 60%\nCompleted B.Com with Computer Applications, gaining knowledge in commerce, accounting, business management, and computer applications."
+    },
+    {
+      "year": "2013-2015",
+      "degree": "HSC",
+      "institution": "Arunachalam Higher Secondary School, Thiruvattar",
+      "description": "Percentage: 62%\nCompleted higher secondary education with a strong academic foundation and developed analytical and communication skills."
+    },
+    {
+      "year": "2013",
+      "degree": "SSLC",
+      "institution": "Govt. High School, Thirunanthikarai",
+      "description": "Percentage: 83%\nCompleted secondary education, building a strong foundation in academics, communication, and general knowledge."
+    }
+  ],
   "about": {
     "title": "Developer mindset. Designer eye.",
     "paragraphs": [
@@ -82,43 +200,49 @@
     ]
   },
   "whatIDo": [
-    {"title":"Graphic Design","icon":"fa-solid fa-pen-nib","description":"Creating creative and professional designs for brands, businesses, events, and social media."},
-    {"title":"Branding & Logo Design","icon":"fa-solid fa-palette","description":"Designing unique logos and visual identities that give brands a strong and memorable presence."},
-    {"title":"Photo Editing & Retouching","icon":"fa-solid fa-image","description":"Professional photo editing, retouching, manipulation, background removal, and image enhancement."},
-    {"title":"Web Design","icon":"fa-solid fa-desktop","description":"Designing clean, responsive, and user-friendly websites with a focus on modern visual experiences."},
-    {"title":"Full Stack Development","icon":"fa-solid fa-code","description":"Building functional and responsive web applications using HTML, CSS, JavaScript, Python, and Django."},
-    {"title":"UI/UX & Creative Solutions","icon":"fa-solid fa-layer-group","description":"Combining design and technology to create attractive, intuitive, and practical digital experiences."}
+    {
+      "title": "Graphic Design",
+      "icon": "fa-solid fa-pen-nib",
+      "description": "Creating creative and professional designs for brands, businesses, events, and social media."
+    },
+    {
+      "title": "Branding & Logo Design",
+      "icon": "fa-solid fa-palette",
+      "description": "Designing unique logos and visual identities that give brands a strong and memorable presence."
+    },
+    {
+      "title": "Photo Editing & Retouching",
+      "icon": "fa-solid fa-image",
+      "description": "Professional photo editing, retouching, manipulation, background removal, and image enhancement."
+    },
+    {
+      "title": "Web Design",
+      "icon": "fa-solid fa-desktop",
+      "description": "Designing clean, responsive, and user-friendly websites with a focus on modern visual experiences."
+    },
+    {
+      "title": "Full Stack Development",
+      "icon": "fa-solid fa-code",
+      "description": "Building functional and responsive web applications using HTML, CSS, JavaScript, Python, and Django."
+    },
+    {
+      "title": "UI/UX & Creative Solutions",
+      "icon": "fa-solid fa-layer-group",
+      "description": "Combining design and technology to create attractive, intuitive, and practical digital experiences."
+    }
   ],
-  "skills": [
-    {"title":"Design Skills","icon":"fa-solid fa-image","items":["Adobe Photoshop","Adobe Illustrator","CorelDRAW","Logo Design","Poster Design","Typography","Image Manipulation","Print Design"]},
-    {"title":"Development Skills","icon":"fa-solid fa-layer-group","items":["HTML5","CSS3","JavaScript","Python","Django","Responsive Web Design","Database Integration","Git & GitHub"]}
-  ],
-  "education": [
-    {"year":"2020 - 2021","degree":"PYTHON FULL STACK DEVELOPER","institution":"Trinity Technology, Trivandrum","description":"Python full Stack developer, Stonge Knowledge in Python, Django, HTML, Css and Js"},
-    {"year":"2015-2018","degree":"B.Com (CA)","institution":"Nesamony Memorial Christian College, Marthandam","description":"Percentage: 60%\nCompleted B.Com with Computer Applications, gaining knowledge in commerce, accounting, business management, and computer applications."},
-    {"year":"2013-2015","degree":"HSC","institution":"Arunachalam Higher Secondary School, Thiruvattar","description":"Percentage: 62%\nCompleted higher secondary education with a strong academic foundation and developed analytical and communication skills."},
-    {"year":"2013","degree":"SSLC","institution":"Govt. High School, Thirunanthikarai","description":"Percentage: 83%\nCompleted secondary education, building a strong foundation in academics, communication, and general knowledge."}
-  ],
-  "whyMe": [
-    {"title":"Creative & Technical","description":"I combine creative design skills with technical development knowledge to handle both the visual and functional sides of a project."},
-    {"title":"Creative Problem Solving","description":"I focus on finding simple, effective, and creative solutions that turn ideas into practical results."},
-    {"title":"Design + Development","description":"With experience in Photoshop, Illustrator, CorelDRAW, HTML, CSS, JavaScript, Python, and Django, I can work across both design and web development."},
-    {"title":"User-Focused Approach","description":"I create designs and websites that are visually appealing, responsive, easy to use, and focused on the user's experience."},
-    {"title":"Attention to Detail","description":"I pay close attention to typography, spacing, colors, layouts, functionality, and overall quality."},
-    {"title":"Continuous Learning","description":"I continuously explore new design techniques and technologies to improve my skills and deliver better work."}
-  ],
-  "contact": {
-    "headline":"Get In Touch",
-    "description":"Have a project in mind or looking for a creative designer and developer? Feel free to get in touch. I’m always open to discussing new projects, creative ideas, and opportunities.",
-    "email":"spbrothers4@gmail.com",
-    "emailButtonLabel":"Email Me",
-    "phone":"+91 80724 05274",
-    "location":"Kulasekaram, Kanyakumari",
-    "github":"",
-    "githubButtonLabel":"GitHub",
-    "linkedin":"",
-    "linkedinButtonLabel":"LinkedIn",
-    "instagram":"https://www.instagram.com/jimbruttan2215?igsh=Z2xnbmRzbDd5ZTdy"
+  "hero": {
+    "name": "Nithin S P",
+    "role": "Full Stack Developer • Graphic Designer",
+    "eyebrow": "Available for opportunities",
+    "intro": "Hi, I’m Nithin S P, a passionate Graphic Designer and Full Stack Developer who enjoys combining creativity with technology. I specialize in graphic design, photo editing, branding, digital artwork, and web development, creating visually appealing designs and functional digital experiences.\n\nI’m always eager to learn, explore new technologies, and turn ideas into creative and practical solutions.",
+    "location": "Kulasekaram, Kanyakumari",
+    "email": "spbrothers4@gmail.com",
+    "profileImage": "/assets/img/uploads/1000708629.png",
+    "resumeUrl": "https://www.dropbox.com/scl/fi/u543a4qmwf1f3icysgc23/Nithin-S-P-Resume.pdf?rlkey=xhtqx3ucg4vyeiy0ozhs5bdzg&st=hpvjnei5&dl=0"
   },
-  "footer": {"copyright":"© 2026 Nithin S P. All Rights Reserved.","credit":"Designed & Developed by Nithin S P."}
+  "footer": {
+    "copyright": "© 2026 Nithin S P. All Rights Reserved.",
+    "credit": "Designed & Developed by Nithin S P."
+  }
 }
