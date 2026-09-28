@@ -1,18 +1,10 @@
 {
   "folders": [
     {
-      "name": "Photoshop",
-      "slug": "photoshop",
-      "description": "Photo editing, digital artwork, and visual compositions created in Adobe Photoshop.",
-      "icon": "fa-solid fa-wand-magic-sparkles",
-      "files": []
-    },
-    {
-      "name": "Illustrator",
-      "slug": "illustrator",
-      "description": "Vector artwork, logos, and illustrations created in Adobe Illustrator.",
-      "icon": "fa-solid fa-pen-nib",
-      "files": []
+      "icon": "fa-solid fa-folder",
+      "name": "Images",
+      "slug": "Images",
+      "description": "Designing files are exported in JPG or JPEG Formate"
     }
   ]
 }
