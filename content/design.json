@@ -4,7 +4,14 @@
       "icon": "fa-solid fa-folder",
       "name": "Images",
       "slug": "Images",
-      "description": "Designing files are exported in JPG or JPEG Formate"
+      "description": "Designing files are exported in JPG or JPEG Formate",
+      "files": [
+        {
+          "file": "assets/img/uploads/picsart_26-08-28_18-36-19-919.png",
+          "image": "assets/img/uploads/picsart_26-08-28_18-36-19-919.png",
+          "title": "Photo Frame"
+        }
+      ]
     }
   ]
 }
